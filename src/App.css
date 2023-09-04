@@ -21,9 +21,11 @@
   color: #121212;
   font-size: 0.7em;
 }
+
 .link:active {
   opacity: 0.5;
 }
+
 .link:focus {
   opacity: 0.5;
 }
@@ -73,6 +75,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

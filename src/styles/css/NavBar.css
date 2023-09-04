@@ -12,9 +12,11 @@
   color: #121212;
   font-size: 0.7em;
 }
+
 .link:active {
   opacity: 0.5;
 }
+
 .link:focus {
   opacity: 0.5;
 }
@@ -38,5 +40,3 @@
   letter-spacing: normal;
   font-size: 1.2em;
 }
-
-/*# sourceMappingURL=NavBar.css.map */
