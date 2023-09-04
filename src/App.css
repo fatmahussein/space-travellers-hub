@@ -2,10 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 .navBar {
   display: flex;
@@ -62,11 +62,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #121212;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #121212;
 }
 
 @keyframes App-logo-spin {
