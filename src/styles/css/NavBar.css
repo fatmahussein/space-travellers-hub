@@ -1,11 +1,40 @@
-.navBar {
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-size: 12px;
+}
+
+.navBar, .navbuttons, .navImg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-self: stretch;
-  padding: 0.5rem 2.5rem 0.2rem 1.5rem;
-  background: red;
   align-items: center;
+}
+
+.navBar {
+  padding: 0.5rem 2rem 0.2rem 1rem;
+}
+
+.navImg {
+  align-items: flex-start;
+  flex: 0.5;
+}
+.navImg img {
+  align-self: flex-start;
+  height: 26px;
+}
+
+.navbuttons {
+  flex: 0.5;
+  padding: 0.3rem 0.2rem;
+  gap: 0.2rem;
+  background: white;
 }
 
 .link {
@@ -15,28 +44,8 @@
 .link:active {
   opacity: 0.5;
 }
-.link:focus {
+.link:active:focus {
   opacity: 0.5;
-}
-
-.navImg img {
-  height: 26px;
-  align-self: flex-end;
-}
-
-.Logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #0290ff;
-  margin-bottom: 0.17rem;
-  margin-right: 0.4rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=NavBar.css.map */
