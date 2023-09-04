@@ -161,7 +161,7 @@ I would like to thank...
 - Microverse Review Team
 - Microverse Community in Slack
 - my Mentor @Strangeal
-- my coding partner @fatmahussein @firepicaso
+- my coding partner @fatmahussein @firepicaso@GeekyHacks
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
