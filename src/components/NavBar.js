@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import planetImg from '../images/planet.png';
+import planetImg from '../Assets/images/planet.png';
 import '../App.css';
 
 const NavBar = () => {
