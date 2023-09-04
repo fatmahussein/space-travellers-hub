@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # sass
-/src/styles/sass 
+/src/styles/sass
+

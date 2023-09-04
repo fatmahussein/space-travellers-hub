@@ -1,10 +1,13 @@
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
-  return (
-    <div className="App" />
-
+  const result = (
+    <div className="App">
+      <NavBar />
+    </div>
   );
+  return result;
 }
 
 export default App;
