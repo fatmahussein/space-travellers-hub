@@ -6,19 +6,19 @@ import '../App.css';
 const NavBar = () => {
   const result = (
     <div className="navBar">
-      <NavLink className="bookstoreTitle" to="/">
-        Bookstore CMS
+      <NavLink className="Logo" to="/">
+        LogoTitle
       </NavLink>
       <NavLink className="link" to="/">
-        Books
+        Rockets
       </NavLink>
       <NavLink className="link" to="/">
-        Categories
+        Missions
       </NavLink>
       <NavLink className="link" to="/">
-        Contact
+        Dragons
       </NavLink>
-      <NavLink className="accountPic" to="/">
+      <NavLink className="navImg" to="/">
         <img src={planetImg} alt="" />
       </NavLink>
     </div>
