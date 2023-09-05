@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import MissionSlice from './Missions/MissionSlice';
 
-export const DataStore = configureStore({
+const DataStore = configureStore({
   reducer: {
     missions: MissionSlice,
   },
 });
+
+export default { DataStore };
