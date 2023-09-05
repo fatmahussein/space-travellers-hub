@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  margin: 2rem;
+  gap: 1rem;
+}
+
+.card .imgcontent img {
+  width: 15rem;
+}
+
+.card .description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.card .description button {
+  background-color: rgb(57, 159, 255);
+  border: none;
+  color: white;
+  padding: 0.625rem;
+  border-radius: 2px;
+}
