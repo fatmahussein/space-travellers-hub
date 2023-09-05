@@ -1,82 +1,27 @@
-.App {
-  text-align: center;
-}
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-.navBar {
+.navbar {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  align-self: stretch;
-  padding: 0.5rem 2.5rem 0.2rem 1.5rem;
-  background: red;
-  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid gray;
 }
 
-.link {
-  color: #121212;
-  font-size: 0.7em;
-}
-
-.link:active {
-  opacity: 0.5;
-}
-
-.link:focus {
-  opacity: 0.5;
-}
-
-.accountPic img {
-  height: 26px;
-  align-self: flex-end;
-}
-
-.bookstoreTitle {
+.navbar .logoInfo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #0290ff;
-  margin-bottom: 0.17rem;
-  margin-right: 0.4rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  font-size: 1.2em;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #121212;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #121212;
+.navbar img {
+  width: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.links {
+  display: flex;
+  gap: 1rem;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.links a {
+  color: blue;
+  text-decoration: none;
 }

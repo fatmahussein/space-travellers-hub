@@ -1,14 +1,17 @@
-// import './styles/css/NavBar.css';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
+import Rocket from './components/Rocket';
 
 function App() {
-  const result = (
-    <div className="App">
+  return (
+    <>
       <NavBar />
-    </div>
+      <Routes>
+        <Route path="/" element={<Rocket />} />
+      </Routes>
+    </>
   );
-  return result;
 }
 
 export default App;
