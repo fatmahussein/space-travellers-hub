@@ -1,11 +1,9 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-// import { reserveRocket, cancelRocket } from '../Redux/RocketSlice';
 import '../css/rocket.css';
+import Button from './Button';
 
 function RocketCard({ rockets }) {
-  // const dispatch = useDispatch();
   return (
     <div>
       {rockets.map((rocket) => (
@@ -16,7 +14,7 @@ function RocketCard({ rockets }) {
           <div className="description">
             <h2>{rocket.name}</h2>
             <p>{rocket.description}</p>
-            <button type="button">Reserve Rocket</button>
+            <Button />
           </div>
         </div>
       ))}
@@ -31,6 +29,7 @@ RocketCard.propTypes = {
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      reserved: PropTypes.bool.isRequired,
     }),
   ).isRequired,
 };

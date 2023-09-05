@@ -2,13 +2,11 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const url = 'https://api.spacexdata.com/v4/rockets';
-
 const initialState = {
   rockets: [],
   isLoading: false,
   isError: false,
 };
-
 export const fetchRockets = createAsyncThunk('rocket/fetchRockets', async () => {
   const dataStream = await axios(url);
   const { data } = await dataStream;
@@ -16,12 +14,10 @@ export const fetchRockets = createAsyncThunk('rocket/fetchRockets', async () => 
     id: rocket.id,
     name: rocket.name,
     description: rocket.description,
-    image: rocket.flickr_images,
-
+    image: rocket.flickr_images[0],
   }));
   return rocketData;
 });
-
 const rocketSlice = createSlice({
   name: 'rocket',
   initialState,
@@ -43,7 +39,6 @@ const rocketSlice = createSlice({
         rockets,
       };
     },
-
     reserveRocket: (state, { payload }) => {
       const rockets = state.rockets.map((rocket) => {
         if (rocket.id === payload) {
@@ -59,7 +54,6 @@ const rocketSlice = createSlice({
         rockets,
       };
     },
-
     cancelRocket: (state, { payload }) => {
       const rockets = state.rockets.map((rocket) => {
         if (rocket.id === payload) {
@@ -75,7 +69,6 @@ const rocketSlice = createSlice({
         rockets,
       };
     },
-
   },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.pending, (state) => ({
@@ -83,7 +76,6 @@ const rocketSlice = createSlice({
       isLoading: true,
       isError: false,
     }));
-
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
       if (state.rockets.length < 1) {
         return {
@@ -99,7 +91,6 @@ const rocketSlice = createSlice({
         isError: false,
       };
     });
-
     builder.addCase(fetchRockets.rejected, (state) => ({
       ...state,
       isLoading: false,
@@ -107,6 +98,5 @@ const rocketSlice = createSlice({
     }));
   },
 });
-
 export default rocketSlice.reducer;
 export const { handleRocket, reserveRocket, cancelRocket } = rocketSlice.actions;

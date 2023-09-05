@@ -22,3 +22,9 @@
   padding: 0.625rem;
   border-radius: 2px;
 }
+
+#cancelReservation {
+  color: gray;
+  background-color: white;
+  border: 1px solid gray;
+}

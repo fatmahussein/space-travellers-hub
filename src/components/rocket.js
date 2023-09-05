@@ -19,10 +19,7 @@ function Rocket() {
   }
   if (rockets.length === 0) return <p className="info">Sorry, no rockets available at the moment</p>;
   return (
-
     <RocketCard rockets={rockets} />
-
   );
 }
-
 export default Rocket;
