@@ -31,3 +31,7 @@
   color: blue;
   text-decoration: none;
 }
+
+.links a:active {
+  text-decoration: underline;
+}
