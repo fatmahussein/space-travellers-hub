@@ -10,13 +10,13 @@ const NavBar = () => {
         <img src={planetImg} alt="" />
       </NavLink>
       <div className="navbuttons">
-        <NavLink className="link" to="/">
+        <NavLink className="link" to="/*">
           Rockets
         </NavLink>
         <NavLink className="link" to="/missions">
           Missions
         </NavLink>
-        <NavLink className="link" to="/">
+        <NavLink className="link" to="/*">
           Dragons
         </NavLink>
 

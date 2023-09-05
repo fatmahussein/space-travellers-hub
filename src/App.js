@@ -13,6 +13,10 @@ function App() {
           {' '}
           Missions
         </Route>
+        <Route className="Missions" path="/*" element={<Missions />}>
+          {' '}
+          Missions
+        </Route>
       </Routes>
     </div>
   );
