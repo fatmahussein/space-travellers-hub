@@ -11,7 +11,7 @@ const initialState = {
 
 export const fetchRockets = createAsyncThunk('rocket/fetchRockets', async () => {
   const dataStream = await axios(url);
-  const data = await dataStream;
+  const { data } = await dataStream;
   const rocketData = data.map((rocket) => ({
     id: rocket.id,
     name: rocket.name,
@@ -26,10 +26,10 @@ const rocketSlice = createSlice({
   name: 'rocket',
   initialState,
   reducers: {
-    handleRocket: (state, action) => {
+    handleRocket: (state, { payload }) => {
       const rockets = [];
       state.rockets.forEach((rocket) => {
-        if (rocket.id === action.payload) {
+        if (rocket.id === payload) {
           rockets.push({
             ...rocket,
             reserved: !rocket.reserved,
@@ -44,9 +44,9 @@ const rocketSlice = createSlice({
       };
     },
 
-    reserveRocket: (state, action) => {
+    reserveRocket: (state, { payload }) => {
       const rockets = state.rockets.map((rocket) => {
-        if (rocket.id === action.payload) {
+        if (rocket.id === payload) {
           return {
             ...rocket,
             reserved: true,
@@ -60,9 +60,9 @@ const rocketSlice = createSlice({
       };
     },
 
-    cancelRocket: (state, action) => {
+    cancelRocket: (state, { payload }) => {
       const rockets = state.rockets.map((rocket) => {
-        if (rocket.id === action.payload) {
+        if (rocket.id === payload) {
           return {
             ...rocket,
             reserved: false,

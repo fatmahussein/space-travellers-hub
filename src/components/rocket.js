@@ -9,8 +9,7 @@ function Rocket() {
   } = useSelector((store) => store.rockets);
   const dispatch = useDispatch();
   useEffect(() => {
-    const rocketData = dispatch(fetchRockets());
-    console.log(rocketData);
+    dispatch(fetchRockets());
   }, [dispatch]);
   if (isLoading) {
     return <p className="info">Loading....Please wait</p>;
