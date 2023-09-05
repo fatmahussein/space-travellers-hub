@@ -1,0 +1,8 @@
+.my-profile-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.myprofile-list {
+    list-style: none;
+}

@@ -20,7 +20,7 @@ const NavBar = () => {
         <NavLink to="/dragons">
           Dragons
         </NavLink>
-        <NavLink to="/myprofile">
+        <NavLink to="/Myprofile">
           My Profile
         </NavLink>
       </div>
