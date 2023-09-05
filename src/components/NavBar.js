@@ -5,23 +5,26 @@ import '../App.css';
 
 const NavBar = () => {
   const result = (
-    <div className="navBar">
-      <NavLink className="Logo" to="/">
-        LogoTitle
-      </NavLink>
-      <NavLink className="link" to="/">
-        Rockets
-      </NavLink>
-      <NavLink className="link" to="/">
-        Missions
-      </NavLink>
-      <NavLink className="link" to="/">
-        Dragons
-      </NavLink>
-      <NavLink className="navImg" to="/">
+    <header className="navbar">
+      <div className="logoInfo">
         <img src={planetImg} alt="" />
-      </NavLink>
-    </div>
+        <h1>Space Traveller&apos;s Hub</h1>
+      </div>
+      <div className="links">
+        <NavLink to="/">
+          Rockets
+        </NavLink>
+        <NavLink to="/missions">
+          Missions
+        </NavLink>
+        <NavLink to="/dragons">
+          Dragons
+        </NavLink>
+        <NavLink to="/myprofile">
+          My Profile
+        </NavLink>
+      </div>
+    </header>
   );
 
   return result;
