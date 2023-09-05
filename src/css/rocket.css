@@ -23,6 +23,23 @@
   border-radius: 2px;
 }
 
+.paragraph {
+  display: flex;
+}
+
+.reservedBadge {
+  background-color: #18a2b8;
+  height: min-content;
+  margin-right: 0.375rem;
+  border-radius: 5px;
+  color: white;
+  padding: 0 5px;
+}
+
+.p {
+  text-align: inherit;
+}
+
 #cancelReservation {
   color: gray;
   background-color: white;
