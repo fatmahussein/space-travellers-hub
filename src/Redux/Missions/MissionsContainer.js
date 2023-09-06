@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions, reserveMission } from './MissionSlice'; // Import the action
@@ -12,9 +13,6 @@ const MissionsContainer = () => {
 
   const [status, setStatus] = useState({}); // State to track status for each mission
 
-  const handleReserveClick = (MissionId) => {
-    dispatch(reserveMission(MissionId));
-  };
 
   // Function to handle joining/leaving a mission
   const handleMissionAction = (missionId) => {
@@ -22,12 +20,12 @@ const MissionsContainer = () => {
       // Leave the mission
       setStatus({ ...status, [missionId]: 'NOT A MEMBER' });
       // Update the reserved flag in the Redux state
-      dispatch(updateReservedStatus({ missionId, reserved: false }));
+      dispatch(reserveMission({ missionId, reserved: true }));
     } else {
       // Join the mission
       setStatus({ ...status, [missionId]: 'Active Member' });
       // Update the reserved flag in the Redux state
-      dispatch(updateReservedStatus({ missionId, reserved: true }));
+      dispatch(reserveMission({ missionId, reserved: false }));
     }
   };
 
