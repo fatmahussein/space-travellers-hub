@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +6,7 @@
   outline: none;
 }
 
-.navBar,
-.navbuttons,
-.navImg {
+.navBar, .navbuttons, .navImg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +27,6 @@
   align-items: flex-start;
   flex: 0.5;
 }
-
 .navImg img {
   align-self: flex-start;
   height: 26px;
@@ -47,11 +43,9 @@
   color: #121212;
   font-size: 0.7em;
 }
-
 .link:active {
   opacity: 0.5;
 }
-
 .link:active:focus {
   opacity: 0.5;
 }
@@ -59,15 +53,51 @@
 .Missions {
   margin: 6rem auto;
 }
-
 .Missions h1 {
   font-size: 1em;
+}
+
+.missions-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 20px;
+}
+
+.missions-table th,
+.missions-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.missions-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Responsive styling */
+.missions-table {
+  font-size: 14px;
+}
+
+.missions-table th,
+.missions-table td {
+  padding: 6px;
+}
+
+/* Alternating row colors */
+.missions-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.missions-table tbody tr:nth-child(odd) {
+  background-color: #d3cfcf;
 }
 
 .App {
   text-align: center;
 }
-
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -79,35 +109,31 @@
 
 body {
   font-size: 12px;
-  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
   body {
     font-size: 18px;
   }
-
   .accountPic img {
     width: 40px;
   }
-
   .navBar {
     padding: 0.7rem 1.5rem;
   }
 }
-
 @media (min-width: 999px) {
   body {
     font-size: 25px;
   }
-
   .accountPic img {
     width: 50px;
   }
 }
-
 @media (min-width: 1200px) {
   body {
     font-size: 30px;
   }
 }
+
+/*# sourceMappingURL=index.css.map */
