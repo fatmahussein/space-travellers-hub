@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from './MissionSlice';
+
 const MissionsContainer = () => {
   const { isLoading } = useSelector((state) => state.missions);
 
@@ -30,7 +31,7 @@ const MissionsContainer = () => {
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-            <th></th>
+            <th>empty</th>
           </tr>
         </thead>
         <tbody>
@@ -38,9 +39,9 @@ const MissionsContainer = () => {
             Missions.map((mission) => (
               <tr key={mission.mission_id}>
                 <td>{mission.mission_name}</td>
-                <td className='description'>{mission.description}</td>
+                <td className="description">{mission.description}</td>
                 <td>Status</td>
-                <td>empty</td> 
+                <td>empty</td>
               </tr>
             ))
           ) : (
