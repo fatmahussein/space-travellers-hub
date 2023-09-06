@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   outline: none;
 }
 
@@ -29,6 +28,7 @@
   align-items: flex-start;
   flex: 0.5;
 }
+
 .navImg img {
   align-self: flex-start;
   height: 26px;
@@ -45,9 +45,11 @@
   color: #121212;
   font-size: 0.7em;
 }
+
 .link:active {
   opacity: 0.5;
 }
+
 .link:active:focus {
   opacity: 0.5;
 }
@@ -55,6 +57,7 @@
 .Missions {
   margin: 6rem auto;
 }
+
 .Missions h1 {
   font-size: 1em;
 }
@@ -99,6 +102,7 @@
 .joinBtn {
   padding: 0.3rem;
 }
+
 .joinBtn:active {
   background: rgba(146, 201, 206, 0.7176470588);
 }
@@ -115,6 +119,7 @@
 .App {
   text-align: center;
 }
+
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -123,5 +128,3 @@
   justify-content: center;
   color: #121212;
 }
-
-/*# sourceMappingURL=App.css.map */

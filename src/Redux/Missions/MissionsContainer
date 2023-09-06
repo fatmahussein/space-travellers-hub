@@ -10,7 +10,6 @@ const MissionsContainer = () => {
     dispatch(getMissions());
   }, [dispatch]);
 
-
   // Function to handle joining/leaving a mission
   const handleMissionAction = (missionId) => {
     // Update the reserved flag in the Redux state
@@ -46,13 +45,7 @@ const MissionsContainer = () => {
                   <p className="status">{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</p>
                 </td>
                 <td>
-                  <button
-                    type="button"
-                    className="joinBtn"
-                    onClick={() =>
-                      handleMissionAction(mission.mission_id)
-                    }
-                  >
+                  <button type="button" className="joinBtn" onClick={() => handleMissionAction(mission.mission_id)}>
                     {mission.reserved ? 'Leave Mission' : 'Join Mission'}
                   </button>
                 </td>

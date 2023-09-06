@@ -48,17 +48,15 @@ const MissionSlice = createSlice({
         }
         return mission;
       });
-    
+
       // Update local storage with the updated missions
       localStorage.setItem('Missions', JSON.stringify(updatedMissions));
-    
+
       return {
         ...state,
         missions: updatedMissions, // Update the missions array
       };
     },
-    
-
   },
   extraReducers(builder) {
     builder
