@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMissions, updateReservedStatus } from './MissionSlice'; // Import the action
+import { getMissions, reserveMission } from './MissionSlice'; // Import the action
 
 const MissionsContainer = () => {
   const { isLoading, missions } = useSelector((state) => state.missions);
@@ -11,6 +11,10 @@ const MissionsContainer = () => {
   }, [dispatch]);
 
   const [status, setStatus] = useState({}); // State to track status for each mission
+
+  const handleReserveClick = (MissionId) => {
+    dispatch(reserveMission(MissionId));
+  };
 
   // Function to handle joining/leaving a mission
   const handleMissionAction = (missionId) => {
@@ -53,14 +57,15 @@ const MissionsContainer = () => {
                 <td>{mission.mission_name}</td>
                 <td className="description">{mission.description}</td>
                 <td>
-                  <p className="status">{status[mission.mission_id] || 'NOT A MEMBER'}</p>
-                  {' '}
+                  <p className="status">{status[mission.mission_id] || 'NOT A MEMBER'}</p>{' '}
                 </td>
                 <td>
                   <button
                     type="button"
                     className="joinBtn"
-                    onClick={() => handleMissionAction(mission.mission_id, !(status[mission.mission_id] === 'Active Member'))}
+                    onClick={() =>
+                      handleMissionAction(mission.mission_id, !(status[mission.mission_id] === 'Active Member'))
+                    }
                   >
                     {status[mission.mission_id] === 'Active Member' ? 'Leave Mission' : 'Join Mission'}
                   </button>
