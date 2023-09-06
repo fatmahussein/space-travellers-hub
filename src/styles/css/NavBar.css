@@ -28,9 +28,8 @@ h1 {
 
 .links a {
   color: blue;
-  text-decoration: none;
 }
 
-.links a:active {
-  text-decoration: underline;
+.active-link {
+  text-decoration: dotted;
 }

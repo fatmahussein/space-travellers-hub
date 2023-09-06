@@ -4,6 +4,7 @@ import planetImg from '../Assets/images/planet.png';
 import '../styles/css/NavBar.css';
 
 const NavBar = () => {
+  const handleActive = (nav) => (nav.isActive ? '' : 'active-link');
   const result = (
     <header className="navbar">
       <div className="logoInfo">
@@ -11,10 +12,10 @@ const NavBar = () => {
         <h1>Space Traveller&apos;s Hub</h1>
       </div>
       <div className="links">
-        <NavLink to="/">Rockets</NavLink>
-        <NavLink to="/missions">Missions</NavLink>
-        <NavLink to="/dragons">Dragons</NavLink>
-        <NavLink to="/Myprofile">My Profile</NavLink>
+        <NavLink className={(nav) => handleActive(nav)} to="/">Rockets</NavLink>
+        <NavLink className={(nav) => handleActive(nav)} to="/missions">Missions</NavLink>
+        <NavLink className={(nav) => handleActive(nav)} to="/dragons">Dragons</NavLink>
+        <NavLink className={(nav) => handleActive(nav)} to="/Myprofile">My Profile</NavLink>
       </div>
     </header>
   );

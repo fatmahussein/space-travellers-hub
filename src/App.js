@@ -1,11 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import Missions from './components/Missions';
-import MissionsContainer from './Redux/Missions/MissionsContainer';
 import './styles/css/App.css';
 import NavBar from './components/NavBar';
 import Rocket from './components/rocket';
 import MyProfile from './components/MyProfile';
+import Missions from './components/Missions';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Rocket />} />
-        <Route className="Missions" path="/missions" element={<MissionsContainer />} />
+        <Route className="Missions" path="/missions" element={<Missions />} />
         <Route path="/MyProfile" element={<MyProfile />} />
       </Routes>
     </>
