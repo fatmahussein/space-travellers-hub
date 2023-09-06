@@ -13,7 +13,7 @@ const MissionsContainer = () => {
   const [status, setStatus] = useState({}); // State to track status for each mission
 
   // Function to handle joining/leaving a mission
-  const handleMissionAction = (missionId, reserved) => {
+  const handleMissionAction = (missionId) => {
     if (status[missionId] === 'Active Member') {
       // Leave the mission
       setStatus({ ...status, [missionId]: 'NOT A MEMBER' });
@@ -53,14 +53,14 @@ const MissionsContainer = () => {
                 <td>{mission.mission_name}</td>
                 <td className="description">{mission.description}</td>
                 <td>
-                  <p className="status">{status[mission.mission_id] || 'NOT A MEMBER'}</p>{' '}
+                  <p className="status">{status[mission.mission_id] || 'NOT A MEMBER'}</p>
+                  {' '}
                 </td>
                 <td>
                   <button
+                    type="button"
                     className="joinBtn"
-                    onClick={() =>
-                      handleMissionAction(mission.mission_id, !(status[mission.mission_id] === 'Active Member'))
-                    }
+                    onClick={() => handleMissionAction(mission.mission_id, !(status[mission.mission_id] === 'Active Member'))}
                   >
                     {status[mission.mission_id] === 'Active Member' ? 'Leave Mission' : 'Join Mission'}
                   </button>
