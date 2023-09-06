@@ -1,8 +1,40 @@
 .my-profile-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.missions {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  width: 30%;
+}
+
+.myRockets {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  width: 30%;
+}
+
+.myDragons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  width: 30%;
 }
 
 .myprofile-list {
   list-style: none;
+  width: 100%;
+}
+
+.myprofile-list li {
+  border: 1px solid gray;
+  display: flex;
+  padding: 0.4rem;
 }
