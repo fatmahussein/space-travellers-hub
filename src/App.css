@@ -1,9 +1,3 @@
-@import url('./styles/css/NavBar.css');
-
-.App {
-  text-align: center;
-}
-
 .navbar {
   display: flex;
   align-items: center;
