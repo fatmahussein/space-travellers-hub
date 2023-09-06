@@ -1,9 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
-// import { useDispatch } from 'react-redux';
-
-// import Missions from './components/Missions';
 import MissionsContainer from './Redux/Missions/MissionsContainer';
 import './styles/css/App.css';
 import NavBar from './components/NavBar';
