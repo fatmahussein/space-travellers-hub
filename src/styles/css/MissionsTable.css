@@ -21,8 +21,7 @@
   font-size: 0.7em;
 }
 
-.status,
-.joinBtn {
+.status, .joinBtn {
   text-align: center;
   white-space: nowrap;
   border-radius: 3px;
@@ -38,7 +37,6 @@
 .joinBtn {
   padding: 0.3rem;
 }
-
 .joinBtn:active {
   background: rgba(146, 201, 206, 0.7176470588);
 }
@@ -51,3 +49,5 @@
 .missions-table tbody tr:nth-child(odd) {
   background-color: #d3cfcf;
 }
+
+/*# sourceMappingURL=MissionsTable.css.map */

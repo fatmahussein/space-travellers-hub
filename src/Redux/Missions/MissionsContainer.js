@@ -20,12 +20,12 @@ const MissionsContainer = () => {
       // Leave the mission
       setStatus({ ...status, [missionId]: 'NOT A MEMBER' });
       // Update the reserved flag in the Redux state
-      dispatch(reserveMission({ missionId, reserved: true }));
+      dispatch(reserveMission({ missionId, reserved: false }));
     } else {
       // Join the mission
       setStatus({ ...status, [missionId]: 'Active Member' });
       // Update the reserved flag in the Redux state
-      dispatch(reserveMission({ missionId, reserved: false }));
+      dispatch(reserveMission({ missionId, reserved: true }));
     }
   };
 
