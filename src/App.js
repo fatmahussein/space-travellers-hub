@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MissionsContainer from './Redux/Missions/MissionsContainer';
-
 import './styles/css/App.css';
 import NavBar from './components/NavBar';
 import Rocket from './components/rocket';
