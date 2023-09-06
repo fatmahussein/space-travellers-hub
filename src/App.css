@@ -2,7 +2,8 @@
 @import url('./styles/css/NavBar.css');
 
 .App {
-  text-align: center;}
+  text-align: center;
+}
 
 .navbar {
   display: flex;
@@ -10,7 +11,6 @@
   justify-content: space-between;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid gray;
-
 }
 
 .navbar .logoInfo {

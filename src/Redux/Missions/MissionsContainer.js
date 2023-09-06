@@ -7,13 +7,13 @@ const MissionsContainer = () => {
 
   const Missions = useSelector((state) => state.missions.missions);
 
-  console.log(Missions);
+  //   console.log(Missions);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getMissions());
-  }, []);
+  }, [dispatch]);
 
   if (isLoading) {
     return (
