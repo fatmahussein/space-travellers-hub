@@ -45,7 +45,39 @@ export const updateReservedStatus = createAsyncThunk(
 const MissionSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  reducers: {
+    reserveMission: (state, { payload }) => {
+      const Missions = state.missions.map((Mission) => {
+        if (Mission.id === payload) {
+          return {
+            ...Mission,
+            reserved: true,
+          };
+        }
+        return Mission;
+      });
+      return {
+        ...state,
+        Missions,
+      };
+    },
+
+    cancelMission: (state, { payload }) => {
+      const Missions = state.Missions.map((Mission) => {
+        if (Mission.id === payload) {
+          return {
+            ...Mission,
+            reserved: false,
+          };
+        }
+        return Mission;
+      });
+      return {
+        ...state,
+        Missions,
+      };
+    },
+  },
   extraReducers(builder) {
     builder
       .addCase(getMissions.pending, (state) => {
