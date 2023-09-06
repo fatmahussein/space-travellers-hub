@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // import Missions from './components/Missions';
 import MissionsContainer from './Redux/Missions/MissionsContainer';
-import './App.css';
+import './styles/css/App.css';
 import NavBar from './components/NavBar';
 import Rocket from './components/rocket';
 import MyProfile from './components/MyProfile';
