@@ -1,25 +1,50 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
 import '../css/myProfile.css';
 
-const MyProfile = () => (
-  <div className="my-profile-container">
-    <div>
-      <h2 className="myprofile-header">My Missions</h2>
-      <ul className="myprofile-list">
-        <li>Mission Mars</li>
-        <li>Mission Mars 2</li>
-        <li>Mission Mars 3</li>
+const MyProfile = () => {
+  const { missions } = useSelector(((state) => state.missions));
+  const reserved = missions.filter((mission) => mission.reserved === true);
+  const { rockets } = useSelector((state) => state.rockets);
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
+  let missionList;
+  let rocketList;
+  if (reserved.length > 0) {
+    missionList = (
+      <ul className="missions-list">
+        {reserved.map((mission) => (
+          <li key={mission.id}>{mission.name}</li>
+        ))}
       </ul>
-    </div>
-    <div>
-      <h2 className="myprofile-header">My Rockets</h2>
-      <ul className="myprofile-list">
-        <li>Falcon Rocket</li>
-        <li>Falcon Rocket 9</li>
-        <li>Falcon Heavy</li>
+    );
+  } else {
+    missionList = (
+      <p className="empty-profile-msg">You have not joined any missions yet</p>
+    );
+  }
+  if (reservedRockets.length > 0) {
+    rocketList = (
+      <ul className="rockets-list">
+        {reservedRockets.map((rocket) => (
+          <li key={rocket.id}>{rocket.name}</li>
+        ))}
       </ul>
+    );
+  } else {
+    rocketList = (
+      <p className="empty-profile-msg">You have not reserved any Rockets yet</p>
+    );
+  }
+  return (
+    <div className="my-profile">
+      <div className="my-missions">
+        <p className="missions-headline">My Missions</p>
+        {missionList}
+      </div>
+      <div className="my-rockets">
+        <p className="rockets-headline">My Rockets</p>
+        {rocketList}
+      </div>
     </div>
-  </div>
-);
-
+  );
+};
 export default MyProfile;
