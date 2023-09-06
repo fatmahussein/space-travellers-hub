@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.navBar,
+.navbuttons,
+.navImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar {
+  padding: 0.5rem 1rem 1.2rem 1rem;
+  height: 0.25rem;
+  margin: 0.5rem 1rem;
+  border: solid 1px #e8e8e8;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.navImg {
+  align-items: flex-start;
+  flex: 0.5;
+}
+
+.navImg img {
+  align-self: flex-start;
+  height: 26px;
+}
+
+.navbuttons {
+  flex: 0.5;
+  padding: 0.3rem 0.2rem;
+  gap: 0.2rem;
+  background: transparent;
+}
+
+.link {
+  color: #121212;
+  font-size: 0.7em;
+}
+
+.link:active {
+  opacity: 0.5;
+}
+
+.link:active:focus {
+  opacity: 0.5;
+}
+
+.Missions {
+  margin: 6rem auto;
+}
+
+.Missions h1 {
+  font-size: 1em;
+}
+
+.missions-table {
+  border-collapse: collapse;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 20px;
+}
+
+.missions-table th,
+.missions-table td {
+  padding: 0.3rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.missions-table th {
+  font-size: 0.9em;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.missions-table td {
+  font-size: 0.7em;
+}
+
+.status,
+.joinBtn {
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 0.8em !important;
+}
+
+.status {
+  padding: 0.1rem;
+  background: rgba(146, 201, 206, 0.7176470588);
+  color: #fff;
+}
+
+.joinBtn {
+  padding: 0.3rem;
+}
+
+.joinBtn:active {
+  background: rgba(146, 201, 206, 0.7176470588);
+}
+
+/* Alternating row colors */
+.missions-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.missions-table tbody tr:nth-child(odd) {
+  background-color: #d3cfcf;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #121212;
+}

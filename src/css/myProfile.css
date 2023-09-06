@@ -1,40 +1,39 @@
-.my-profile-container {
+.my-profile {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 2rem;
+  gap: 2rem;
+  font-family: arial, sans-serif;
+  width: 100%;
+  margin: 1rem;
 }
 
-.missions {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 1rem;
-  width: 30%;
-}
-
-.myRockets {
+.my-missions,
+.my-rockets {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 1rem;
-  width: 30%;
+  width: 40%;
 }
 
-.myDragons {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 1rem;
-  width: 30%;
+.missions-headline,
+.rockets-headline {
+  font-weight: 600;
+  font-size: 24px;
 }
 
-.myprofile-list {
-  list-style: none;
+.missions-list,
+.rockets-list {
   width: 100%;
 }
 
-.myprofile-list li {
-  border: 1px solid gray;
-  display: flex;
-  padding: 0.4rem;
+.missions-list li,
+.rockets-list li {
+  border: solid 1px rgb(211, 211, 211);
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  list-style: none;
+  font-size: 18px;
+}
+
+.empty-profile-msg {
+  font-size: 19px;
 }
