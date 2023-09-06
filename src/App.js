@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Missions from './components/Missions';
+// import Missions from './components/Missions';
+import MissionsContainer from "./Redux/Missions/MissionsContainer";
 import './App.css';
 import NavBar from './components/NavBar';
 import Rocket from './components/rocket';
@@ -12,7 +13,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Rocket />} />
-        <Route className="Missions" path="/missions" element={<Missions />} />
+        <Route className="Missions" path="/missions" element={<MissionsContainer />} />
         <Route path="/MyProfile" element={<MyProfile />} />
       </Routes>
     </>

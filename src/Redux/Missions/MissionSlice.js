@@ -1,26 +1,28 @@
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import axios from 'axios';
+import axios from 'axios';
 import MissionsData from './missionsData';
-
 
 const apiUrl = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
-  missions: MissionsData,
+  missions: [],
+  isLoading: false,
 };
-
 
 export const getMissions = createAsyncThunk('missions/getMissions', async (thunkAPI) => {
   try {
     const resp = await axios.get(apiUrl);
-    // to fetch data from API with the desired format
+
+console.log(resp.data);
+
     const transformedmissions = Object.keys(resp.data).map((key) => {
-      const bookData = resp.data[key][0];
+      const MissionData = resp.data[key];
+      console.log(resp.data[key]);
+      console.log(MissionData.missions);
       return {
         mission_id: key,
-        mission_name: bookData.mission_name,
-        description: bookData.description,
+        mission_name: MissionData.mission_name,
+        description: MissionData.description,
       };
     });
 
@@ -41,7 +43,7 @@ const MissionSlice = createSlice({
       })
       .addCase(getMissions.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.bookItems = action.payload;
+        state.missions = action.payload;
       })
       .addCase(getMissions.rejected, (state, action) => {
         state.isLoading = false;
@@ -51,4 +53,5 @@ const MissionSlice = createSlice({
 });
 
 export default MissionSlice.reducer;
+
 
