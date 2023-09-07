@@ -55,37 +55,6 @@
   opacity: 0.5;
 }
 
-.Missions {
-  margin: 6rem auto;
-}
-
-.Missions h1 {
-  font-size: 1em;
-}
-
-.missions-table {
-  border-collapse: collapse;
-  border: 1px solid #c4c4c4;
-  margin-bottom: 20px;
-}
-
-.missions-table th,
-.missions-table td {
-  padding: 0.3rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.missions-table th {
-  font-size: 0.9em;
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-.missions-table td {
-  font-size: 0.7em;
-}
-
 .status,
 .joinBtn {
   text-align: center;
