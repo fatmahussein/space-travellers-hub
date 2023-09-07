@@ -1,64 +1,60 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import '@testing-library/jest-dom/extend-expect';
+import { render, fireEvent } from '@testing-library/react';
+import { toBeInTheDocument } from '@testing-library/jest-dom/matchers';
+import { useDispatch } from 'react-redux';
 import RocketCard from '../RocketCard';
 
-const mockStore = configureStore([]);
-
-describe('RocketCard Component', () => {
-  it('renders the component with reserved badge if reserved is true', () => {
-    const rocket = {
+jest.mock('react-redux', () => ({
+  useDispatch: jest.fn(),
+}));
+expect.extend({ toBeInTheDocument });
+describe('RocketCard', () => {
+  const rockets = [
+    {
       id: '1',
-      name: 'Rocket 1',
-      image: 'rocket1.jpg',
-      description: 'Description for Rocket 1',
-      reserved: true,
-    };
-
-    const store = mockStore();
-
-    render(
-      <Provider store={store}>
-        <RocketCard fcrockets={rocket} />
-      </Provider>,
-    );
-
-    const reservedBadge = screen.getByText(/Reserved/i);
-    expect(reservedBadge).toBeInTheDocument();
-    expect(reservedBadge).toMatchSnapshot();
-  });
-
-  it('renders the component without reserved badge if reserved is false', () => {
-    const rocket = {
+      name: 'Falcon 9',
+      image: 'falcon9.jpg',
+      description: 'This is Falcon 9 rocket',
+      reserved: false,
+    },
+    {
       id: '2',
-      name: 'Rocket 2',
-      image: 'rocket2.jpg',
-      description: 'Description for Rocket 2',
-      reserved: false,
-    };
-    const store = mockStore();
-    render(
-      <Provider store={store}>
-        <RocketCard rockets={rocket} />
-      </Provider>,
-    );
-    const reservedBadge = screen.queryByText(/Reserved/i);
-    expect(reservedBadge).toBeNull();
+      name: 'Starship',
+      image: 'starship.jpg',
+      description: 'This is Starship rocket',
+      reserved: true,
+    },
+  ];
+  beforeEach(() => {
+    useDispatch.mockReturnValue(jest.fn());
   });
-
-  it('calls reserveRocket action when Reserve button is clicked', () => {
-    const rocket = {
-      id: '3',
-      name: 'Rocket 3',
-      image: 'rocket3.jpg',
-      description: 'Description for Rocket 3',
-      reserved: false,
-    };
-    const store = mockStore();
-    render(<Provider store={store}><RocketCard rockets={rocket} /></Provider>);
-    const reserveButton = screen.getByText(/Reserve rocket/i);
+  it('renders rocket cards correctly', () => {
+    const { getAllByAltText, getByText } = render(<RocketCard rockets={rockets} />);
+    const rocketImages = getAllByAltText('picha');
+    expect(rocketImages.length).toBe(rockets.length);
+    rockets.forEach((rocket, index) => {
+      const rocketName = getByText(rocket.name);
+      const rocketDescription = getByText(rocket.description);
+      const rocketImage = rocketImages[index];
+      expect(rocketName).toBeInTheDocument();
+      expect(rocketDescription).toBeInTheDocument();
+      expect(rocketImage).toBeInTheDocument();
+    });
+  });
+  it('calls dispatch with the correct action when reserve button is clicked', () => {
+    const mockDispatch = jest.fn();
+    useDispatch.mockReturnValue(mockDispatch);
+    const { getByText } = render(<RocketCard rockets={rockets} />);
+    const reserveButton = getByText('Reserve Rocket');
     fireEvent.click(reserveButton);
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'rocket/reserveRocket', payload: rockets[0].id });
+  });
+  it('calls dispatch with the correct action when cancel button is clicked', () => {
+    const mockDispatch = jest.fn();
+    useDispatch.mockReturnValue(mockDispatch);
+    const { getByText } = render(<RocketCard rockets={rockets} />);
+    const cancelButton = getByText('Cancel Reservation');
+    fireEvent.click(cancelButton);
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'rocket/cancelRocket', payload: rockets[1].id });
   });
 });
