@@ -1,0 +1,53 @@
+.missions-table {
+  border-collapse: collapse;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 20px;
+}
+
+.missions-table th,
+.missions-table td {
+  padding: 0.3rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.missions-table th {
+  font-size: 0.9em;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.missions-table td {
+  font-size: 0.7em;
+}
+
+.status,
+.joinBtn {
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 0.8em !important;
+}
+
+.status {
+  padding: 0.1rem;
+  background: rgba(146, 201, 206, 0.7176470588);
+  color: #fff;
+}
+
+.joinBtn {
+  padding: 0.3rem;
+}
+
+.joinBtn:active {
+  background: rgba(146, 201, 206, 0.7176470588);
+}
+
+/* Alternating row colors */
+.missions-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.missions-table tbody tr:nth-child(odd) {
+  background-color: #d3cfcf;
+}

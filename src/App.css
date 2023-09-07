@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.navbar .logoInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar img {
+  width: 40px;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links a {
+  color: blue;
+  text-decoration: none;
+}
+
+.links a:active {
+  text-decoration: underline;
+}

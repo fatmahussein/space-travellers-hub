@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.navbar .logoInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.navbar img {
+  width: 40px;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  font-size: 20px;
+}
+
+.links a {
+  color: blue;
+}
+
+.active-link {
+  text-decoration: dotted;
+}
+
+.border {
+  border: 1px solid black;
+}
