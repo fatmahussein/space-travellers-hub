@@ -22,14 +22,16 @@ td,
 th {
   text-align: left;
   border: solid 1px rgb(223, 223, 223);
-  vertical-align: top;
+
+  /* vertical-align: top; */
   padding: 0.5rem;
 }
 
 .table-btns,
 .table-badges {
   width: 12%;
-  vertical-align: middle;
+
+  /* vertical-align: middle; */
   text-align: center;
 }
 
@@ -53,23 +55,24 @@ th {
   border: transparent;
 }
 
-.join-mission-btn {
-  padding: 0.5rem;
+.joinBtn {
   font-weight: 600;
+  font-size: 0.6em;
   background: transparent;
-  font-size: 14px;
   color: rgb(105, 105, 105);
   border: solid 2px;
-  border-radius: 0.3rem;
+  border-radius: 0.1rem;
 }
 
-.leave-mission-btn {
-  padding: 0.5rem;
-  font-weight: 600;
-  background: transparent;
+.joinBtn.clicked {
+  white-space: nowrap;
+  font-size: 0.6em;
   color: red;
+  padding: 0.2rem;
+  background: transparent;
+  font-weight: 600;
   border: solid 2px;
-  border-radius: 0.3rem;
+  border-radius: 0.1rem;
 }
 
 button {
