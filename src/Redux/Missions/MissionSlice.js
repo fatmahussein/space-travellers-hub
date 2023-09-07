@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+// import axios from 'axios';
 
 const apiUrl = 'https://api.spacexdata.com/v3/missions';
 
@@ -14,8 +14,11 @@ export const getMissions = createAsyncThunk('missions/getMissions', async (thunk
     const userData = localStorage.getItem('Missions');
 
     if (userData === null) {
-      const resp = await axios.get(apiUrl);
-      const transformedmissions = Object.keys(resp.data).map((key) => {
+      const urlData = await fetch(apiUrl);
+      const resp = urlData.json();
+      console.log(resp.data);
+      // const resp = await axios.get(apiUrl);
+      const ExtractedData = Object.keys(resp.data).map((key) => {
         const MissionData = resp.data[key];
         return {
           mission_id: key,
@@ -25,7 +28,7 @@ export const getMissions = createAsyncThunk('missions/getMissions', async (thunk
         };
       });
 
-      return transformedmissions;
+      return ExtractedData;
     }
     return JSON.parse(userData);
   } catch (error) {
