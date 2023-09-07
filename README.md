@@ -133,7 +133,7 @@ Must-Install-Project-with-the-Following-Programmes:
 - Twitter: [Geekydart](https://twitter.com/GeekyDart)
 - LinkedIn: [Abdullah Nasser](https://www.linkedin.com/in/abdullah-nasser-711625268/)
 
-- 👤 **Fatuma Hussein**
+👤 **Fatuma Hussein**
 
 - GitHub: [@fatmahussein](https://github.com/fatmahussein)
 - Twitter: [@FatmaHussein200](https://twitter.com/@FatmaHussein200)
