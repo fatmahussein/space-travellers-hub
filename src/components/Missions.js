@@ -10,7 +10,7 @@ const Missions = () => {
 
   useEffect(() => {
     dispatch(getMissions());
-  }, [dispatch]);
+  }, []);
 
   // Function to handle joining/leaving a mission
   const handleMissionAction = (mission) => {
