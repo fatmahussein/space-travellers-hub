@@ -133,6 +133,12 @@ Must-Install-Project-with-the-Following-Programmes:
 - Twitter: [Geekydart](https://twitter.com/GeekyDart)
 - LinkedIn: [Abdullah Nasser](https://www.linkedin.com/in/abdullah-nasser-711625268/)
 
+- 👤 **Fatuma Hussein**
+
+- GitHub: [@fatmahussein](https://github.com/fatmahussein)
+- Twitter: [@FatmaHussein200](https://twitter.com/@FatmaHussein200)
+- LinkedIn: [FatumaHussein](https://www.linkedin.com/in/fatuma-hussein-48149917b)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Adding more webpack deps
