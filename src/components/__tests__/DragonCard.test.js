@@ -26,18 +26,18 @@ describe('DragonCard', () => {
       reserved: true,
     },
   ];
-  
+
   beforeEach(() => {
     useDispatch.mockReturnValue(jest.fn());
   });
-  
+
   it('renders dragon cards correctly', () => {
     const { getAllByAltText, getByText, queryAllByText } = render(<DragonCard dragons={dragons} />);
     const dragonImages = getAllByAltText('dragon');
     expect(dragonImages.length).toBe(dragons.length);
 
     const capsuleTextElements = queryAllByText('capsule');
-    
+
     const dragonType = capsuleTextElements[0];
     expect(dragonType).toBeInTheDocument();
 
@@ -46,7 +46,7 @@ describe('DragonCard', () => {
     expect(dragonName2).toBeInTheDocument();
     expect(dragonType2).toBeInTheDocument();
   });
-  
+
   it('calls dispatch with the correct action when reserve button is clicked', () => {
     const mockDispatch = jest.fn();
     useDispatch.mockReturnValue(mockDispatch);
@@ -55,7 +55,7 @@ describe('DragonCard', () => {
     fireEvent.click(reserveButton);
     expect(mockDispatch).toHaveBeenCalledWith({ type: 'dragon/reserveDragon', payload: dragons[0].id });
   });
-  
+
   it('calls dispatch with the correct action when cancel button is clicked', () => {
     const mockDispatch = jest.fn();
     useDispatch.mockReturnValue(mockDispatch);
