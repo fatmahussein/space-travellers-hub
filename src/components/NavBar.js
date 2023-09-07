@@ -15,6 +15,7 @@ const NavBar = () => {
         <NavLink className={(nav) => handleActive(nav)} to="/">Rockets</NavLink>
         <NavLink className={(nav) => handleActive(nav)} to="/missions">Missions</NavLink>
         <NavLink className={(nav) => handleActive(nav)} to="/dragons">Dragons</NavLink>
+        <div className="border" />
         <NavLink className={(nav) => handleActive(nav)} to="/Myprofile">My Profile</NavLink>
       </div>
     </header>
