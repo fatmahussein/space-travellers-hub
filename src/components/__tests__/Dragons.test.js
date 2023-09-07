@@ -3,7 +3,6 @@ import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import Dragons from '../Dragons';
 
-
 const mockStore = configureStore([]);
 
 describe('Dragons Component', () => {
