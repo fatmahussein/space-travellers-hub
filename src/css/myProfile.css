@@ -27,15 +27,29 @@
 .rockets-list,
 .dragons-list {
   width: 100%;
+  list-style: none;
 }
 
+ul {
+  list-style: none;
+  border: solid 1px rgb(211, 211, 211);
+}
+li {
+  border: solid 1px rgb(211, 211, 211);
+  border-bottom: none;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
 .missions-list li,
 .rockets-list li,
 .dragons-list li {
-  border: solid 1px rgb(211, 211, 211);
+  border: solid 2px rgb(211, 211, 211);
   padding: 0.5rem 0.5rem 1rem 0.5rem;
   list-style: none;
   font-size: 18px;
+}
+
+.missions-list li {
+  list-style: none !important;
 }
 
 .empty-profile-msg {
