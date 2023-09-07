@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    margin: 2rem;
+    gap: 1rem;
+  }
+  
+.card .imgcontent img {
+width: 15rem;
+}
+
+.card .type {
+display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: flex-start;
+}
+
+.card .type button {
+background-color: rgb(57, 159, 255);
+border: none;
+color: white;
+padding: 0.625rem;
+border-radius: 2px;
+}
+
+.paragraph {
+display: flex;
+}
+
+.reservedBadge {
+background-color: #18a2b8;
+height: min-content;
+margin-right: 0.375rem;
+border-radius: 5px;
+color: white;
+padding: 0 5px;
+}
+
+h2 {
+font-size: 20px;
+}
+
+.p {
+text-align: inherit;
+font-size: 16px;
+}
+
+#cancelReservation {
+color: gray;
+background-color: white;
+border: 1px solid gray;
+}

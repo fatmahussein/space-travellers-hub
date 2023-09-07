@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './styles/css/App.css';
 import NavBar from './components/NavBar';
 import Rocket from './components/rocket';
 import Dragons from './components/Dragons';
 import MyProfile from './components/MyProfile';
 import Missions from './components/Missions';
+import './styles/css/App.css';
 
 function App() {
   return (
