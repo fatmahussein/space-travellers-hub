@@ -9,8 +9,10 @@ function Rocket() {
   } = useSelector((store) => store.rockets);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (rockets.length < 1) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rockets.length]);
   if (isLoading) {
     return <p className="info">Loading....Please wait</p>;
   }
@@ -19,7 +21,10 @@ function Rocket() {
   }
   if (rockets.length === 0) return <p className="info">Sorry, no rockets available at the moment</p>;
   return (
-    <RocketCard rockets={rockets} />
+    <div data-testid="rocket">
+      <RocketCard rockets={rockets} />
+    </div>
+
   );
 }
 export default Rocket;
