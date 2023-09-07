@@ -8,8 +8,10 @@ function Dragons() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDragons());
-  }, [dispatch]);
+    if (dragons.length < 1) {
+      dispatch(fetchDragons());
+    }
+  }, [dispatch, dragons.length]);
 
   if (isLoading) {
     return <p className="info">Loading....Please wait</p>;
@@ -19,7 +21,9 @@ function Dragons() {
   }
   if (dragons.length === 0) return <p className="info">Sorry, no dragons available at the moment</p>;
   return (
-    <DragonCard dragons={dragons} />
+    <div data-testid="dragon">
+      <DragonCard dragons={dragons} />
+    </div>
   );
 }
 

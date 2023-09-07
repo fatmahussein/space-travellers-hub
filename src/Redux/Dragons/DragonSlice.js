@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+// import axios from 'axios';
 
 const url = 'https://api.spacexdata.com/v4/dragons';
 const initialState = {
@@ -9,8 +9,8 @@ const initialState = {
 };
 
 export const fetchDragons = createAsyncThunk('dragon/fetchDragons', async () => {
-  const dataStream = await axios(url);
-  const { data } = await dataStream;
+  const dataStream = await fetch(url);
+  const data = await dataStream.json();
   const dragonData = data.map((dragon) => ({
     id: dragon.id,
     name: dragon.name,

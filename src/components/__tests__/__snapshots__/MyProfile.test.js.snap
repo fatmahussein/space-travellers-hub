@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyProfile Component should render MyProfile component with mission, rocket, and dragon lists 1`] = `
+<div>
+  <div
+    class="my-profile"
+  >
+    <div
+      class="my-missions"
+    >
+      <p
+        class="missions-headline"
+      >
+        My Missions
+      </p>
+      <p
+        class="empty-profile-msg"
+      >
+        You have not joined any missions yet
+      </p>
+    </div>
+    <div
+      class="my-rockets"
+    >
+      <p
+        class="rockets-headline"
+      >
+        My Rockets
+      </p>
+      <p
+        class="empty-profile-msg"
+      >
+        You have not reserved any Rockets yet
+      </p>
+    </div>
+    <div
+      class="my-dragons"
+    >
+      <p
+        class="dragons-headline"
+      >
+        My Dragons
+      </p>
+      <p
+        class="empty-profile-msg"
+      >
+        You have not reserved any Dragons yet
+      </p>
+    </div>
+  </div>
+</div>
+`;
