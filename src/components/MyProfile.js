@@ -9,24 +9,14 @@ const MyProfile = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getMissions());
-  }, []);
+  }, [dispatch]);
   const { rockets } = useSelector((state) => state.rockets);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
   const { dragons } = useSelector((state) => state.dragons);
   const reservedDragons = dragons.filter((dragon) => dragon.reserved === true);
   let rocketList;
   let dragonList;
-  // if (reserved.length > 0) {
-  //   missionList = (
-  //     <ul className="missions-list">
-  //       {reserved.map((mission) => (
-  //         <li key={mission.id}>{mission.name}</li>
-  //       ))}
-  //     </ul>
-  //   );
-  // } else {
-  //   missionList = <p className="empty-profile-msg">You have not joined any missions yet</p>;
-  // }
+
   if (reservedRockets.length > 0) {
     rocketList = (
       <ul className="rockets-list">
@@ -51,10 +41,6 @@ const MyProfile = () => {
   }
   return (
     <div className="my-profile">
-      {/* <div className="my-missions">
-        <p className="missions-headline">My Missions</p>
-        {missionList}
-      </div> */}
       <div className="my-missions">
         <h2 className="myprofile-header">My Missions</h2>
         <ul className="myprofile-list">

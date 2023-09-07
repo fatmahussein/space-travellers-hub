@@ -34,11 +34,13 @@ ul {
   list-style: none;
   border: solid 1px rgb(211, 211, 211);
 }
+
 li {
   border: solid 1px rgb(211, 211, 211);
   border-bottom: none;
   padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
+
 .missions-list li,
 .rockets-list li,
 .dragons-list li {

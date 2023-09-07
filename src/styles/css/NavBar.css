@@ -33,6 +33,7 @@ h1 {
 .active-link {
   text-decoration: dotted;
 }
-.border{
+
+.border {
   border: 1px solid black;
 }
