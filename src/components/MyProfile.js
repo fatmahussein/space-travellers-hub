@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMissions } from '../Redux/Missions/MissionSlice';
+import { handleMission } from '../Redux/Missions/MissionSlice';
 import '../css/myProfile.css';
 
 const MyProfile = () => {
-  const missions = useSelector((state) => state.missions.missions); // Use "missions" directly
-  const reservedMissions = missions.filter((mission) => mission.reserved === true);
+  const { missions } = useSelector(((state) => state.missions));
+  const reserved = missions.filter((mission) => mission.reserved === true);
+
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getMissions());
+    dispatch(handleMission());
   }, [dispatch]);
   const { rockets } = useSelector((state) => state.rockets);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
@@ -16,7 +17,20 @@ const MyProfile = () => {
   const reservedDragons = dragons.filter((dragon) => dragon.reserved === true);
   let rocketList;
   let dragonList;
-
+  let missionList;
+  if (reserved.length > 0) {
+    missionList = (
+      <ul className="missions-list">
+        {reserved.map((mission) => (
+          <li key={mission.id}>{mission.name}</li>
+        ))}
+      </ul>
+    );
+  } else {
+    missionList = (
+      <p className="empty-profile-msg">You have not joined any missions yet</p>
+    );
+  }
   if (reservedRockets.length > 0) {
     rocketList = (
       <ul className="rockets-list">
@@ -42,12 +56,8 @@ const MyProfile = () => {
   return (
     <div className="my-profile">
       <div className="my-missions">
-        <h2 className="myprofile-header">My Missions</h2>
-        <ul className="myprofile-list">
-          {reservedMissions.map((Mission) => (
-            <li key={Mission.id}>{Mission.mission_name}</li>
-          ))}
-        </ul>
+        <p className="missions-headline">My Missions</p>
+        {missionList}
       </div>
       <div className="my-rockets">
         <p className="rockets-headline">My Rockets</p>
