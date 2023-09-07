@@ -50,14 +50,13 @@
 // };
 // export default Missions;
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import { fetchMissions } from '../Redux/Missions/MissionSlice';
 import '../styles/css/Missions.css';
 import { getMissions, reserveMission } from '../Redux/Missions/MissionSlice';
 const Missions = () => {
   const { isLoading, missions } = useSelector((state) => state.missions);
-  const [isClicked, setIsClicked] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -70,13 +69,19 @@ const Missions = () => {
   };
 
   // Function to handle joining/leaving a mission
-  const handleMissionAction = (missionId) => {
-    // const JoinBtn = document.getElementsByClassName('joinBtn');
-    handleClick();
-    // JoinBtn.classList.toggle('clicked');
+  // const handleMissionAction = (missionId) => {
+  //   // const JoinBtn = document.getElementsByClassName('joinBtn');
+  //   // handleClick();
+  //   // JoinBtn.classList.toggle('clicked');
+  //   dispatch(handleClick({ missionId }));
+  //   // Update the reserved flag in the Redux state
+  //   dispatch(reserveMission({ missionId }));
+  // };
 
+  // Function to handle joining/leaving a mission
+  const handleMissionAction = (mission) => {
     // Update the reserved flag in the Redux state
-    dispatch(reserveMission({ missionId }));
+    dispatch(reserveMission({ missionId: mission.mission_id }));
   };
 
   if (isLoading) {
@@ -110,9 +115,9 @@ const Missions = () => {
                 <td>
                   <button
                     type="button"
-                    className={`joinBtn${isClicked ? 'clicked' : ''}`}
+                    className={`joinBtn ${mission.reserved ? 'clicked' : ''}`}
                     onClick={() => {
-                      handleMissionAction(mission.mission_id);
+                      handleMissionAction(mission);
                     }}
                   >
                     {mission.reserved ? 'Leave Mission' : 'Join Mission'}
