@@ -9,14 +9,13 @@ const NavBar = () => {
     <header className="navbar">
       <div className="logoInfo">
         <img src={planetImg} alt="" />
-        <h1>Space Traveller&apos;s Hub</h1>
+        <h1 className='navHeader'>Space Traveller&apos;s Hub</h1>
       </div>
       <div className="links">
         <NavLink className={(nav) => handleActive(nav)} to="/">Rockets</NavLink>
         <NavLink className={(nav) => handleActive(nav)} to="/missions">Missions</NavLink>
         <NavLink className={(nav) => handleActive(nav)} to="/dragons">Dragons</NavLink>
-        <div className="border" />
-        <NavLink className={(nav) => handleActive(nav)} to="/Myprofile">My Profile</NavLink>
+        <NavLink id="border" className={(nav) => handleActive(nav)} to="/Myprofile">My Profile</NavLink>
       </div>
     </header>
   );

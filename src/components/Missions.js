@@ -12,9 +12,7 @@ const Missions = () => {
       dispatch(fetchMissions());
     }
   }, [dispatch, missions.length]);
-
   let content;
-
   if (!pending && !error && Array.isArray(missions)) {
     content = (
       <table className="missions-table">
@@ -34,7 +32,6 @@ const Missions = () => {
       </table>
     );
   }
-
   if (pending) {
     content = (
       <h1>Fetching Missions</h1>
@@ -51,5 +48,4 @@ const Missions = () => {
     </section>
   );
 };
-
 export default Missions;

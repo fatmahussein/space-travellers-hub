@@ -12,16 +12,16 @@ const MissionCard = ({ props }) => {
     let button;
     if (btn === 'member') {
       button = reserved ? (
-        <span className="active-member-badge">active member</span>
+        <span className="statusAfter">active member</span>
       ) : (
-        <span className="not-member-badge">Not a member</span>
+        <span className="statusBefore">Not a member</span>
       );
     }
     if (btn === 'mission') {
       button = reserved ? (
-        <button className="leave-mission-btn" type="button" onClick={() => dispatch(handleMission(id))}>Leave Mission</button>
+        <button className="leaveBtn" type="button" onClick={() => dispatch(handleMission(id))}>Leave Mission</button>
       ) : (
-        <button className="join-mission-btn" type="button" onClick={() => dispatch(handleMission(id))}>Join Mission</button>
+        <button className="joinBtn" type="button" onClick={() => dispatch(handleMission(id))}>Join Mission</button>
       );
     }
     return button;
