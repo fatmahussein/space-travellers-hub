@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { handleMission } from '../Redux/Missions/MissionSlice';
+import { handleMission } from '../Redux/MissionSlice';
 
 const MissionCard = ({ props }) => {
   const {

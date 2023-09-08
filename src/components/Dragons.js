@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import DragonCard from './DragonCard';
-import { fetchDragons } from '../Redux/Dragons/DragonSlice';
+import { fetchDragons } from '../Redux/DragonSlice';
 
 function Dragons() {
   const { dragons, isLoading, isError } = useSelector((store) => store.dragons);

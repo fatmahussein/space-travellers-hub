@@ -3,18 +3,15 @@
   margin: 2rem;
   gap: 1rem;
 }
-
 .card .imgcontent img {
   width: 15rem;
 }
-
 .card .description {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
 }
-
 .card .description button {
   background-color: rgb(57, 159, 255);
   border: none;
@@ -36,17 +33,10 @@
   padding: 0 5px;
 }
 
-h2 {
-  font-size: 20px;
-}
-
-.p {
-  text-align: inherit;
-  font-size: 16px;
-}
-
 #cancelReservation {
   color: gray;
   background-color: white;
   border: 1px solid gray;
 }
+
+/*# sourceMappingURL=rocket.css.map */

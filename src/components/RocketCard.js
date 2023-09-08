@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import '../css/rocket.css';
+import '../styles/css/rocket.css';
 import { reserveRocket, cancelRocket } from '../Redux/RocketSlice';
 
 function RocketCard({ rockets }) {
