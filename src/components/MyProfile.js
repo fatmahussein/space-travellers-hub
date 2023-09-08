@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { handleMission } from '../Redux/Missions/MissionSlice';
-import '../css/myProfile.css';
+import { handleMission } from '../Redux/MissionSlice';
+import '../styles/css/myProfile.css';
 
 const MyProfile = () => {
   const { missions } = useSelector(((state) => state.missions));

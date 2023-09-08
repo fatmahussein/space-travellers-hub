@@ -1,17 +1,12 @@
-.missions-table {
-  border-collapse: collapse;
-  border: 1px solid #c4c4c4;
-  margin-bottom: 20px;
-}
-
 .missions-table th,
 .missions-table td {
   padding: 0.3rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
+  border: 1px solid #c4c4c4;
 }
 
 .missions-table th {
+  text-align: left;
   font-size: 0.9em;
   background-color: #f2f2f2;
   font-weight: bold;
@@ -19,35 +14,50 @@
 
 .missions-table td {
   font-size: 0.7em;
+  text-align: left;
 }
 
-.status,
-.joinBtn {
+.statusBefore,
+.joinBtn,
+.statusAfter,
+.leaveBtn {
   text-align: center;
   white-space: nowrap;
   border-radius: 3px;
-  font-size: 0.8em !important;
+  font-size: 0.7em !important;
+  text-decoration: none;
+  outline: none;
 }
 
-.status {
+.statusBefore {
   padding: 0.1rem;
-  background: rgba(146, 201, 206, 0.7176470588);
+  background: #898585;
+  color: #fff;
+}
+
+.statusAfter {
+  padding: 0.1rem;
+  background: #7d9f9f;
   color: #fff;
 }
 
 .joinBtn {
   padding: 0.3rem;
+  color: #898585;
+  border: solid 1px #898585;
 }
 
-.joinBtn:active {
-  background: rgba(146, 201, 206, 0.7176470588);
+.leaveBtn {
+  padding: 0.3rem;
+  color: red;
+  border: solid 1px red;
 }
 
 /* Alternating row colors */
 .missions-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #d3cfcf;
 }
 
 .missions-table tbody tr:nth-child(odd) {
-  background-color: #d3cfcf;
+  background-color: #f2f2f2;
 }

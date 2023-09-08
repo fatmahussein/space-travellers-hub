@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveDragon, cancelDragon } from '../Redux/Dragons/DragonSlice';
-import '../css/dragon.css';
+import { reserveDragon, cancelDragon } from '../Redux/DragonSlice';
+import '../styles/css/dragon.css';
 
 function DragonCard({ dragons }) {
   const dispatch = useDispatch();
@@ -28,9 +28,13 @@ function DragonCard({ dragons }) {
               </p>
             </div>
             {dragon.reserved ? (
-              <button type="button" id="cancelReservation" onClick={() => handleCancelClick(dragon.id)}>Cancel Reservation</button>
+              <button type="button" id="cancelReservation" onClick={() => handleCancelClick(dragon.id)}>
+                Cancel Reservation
+              </button>
             ) : (
-              <button type="button" onClick={() => handleReserveClick(dragon.id)}>Reserve Dragon</button>
+              <button type="button" onClick={() => handleReserveClick(dragon.id)}>
+                Reserve Dragon
+              </button>
             )}
           </div>
         </div>

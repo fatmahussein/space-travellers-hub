@@ -36,15 +36,6 @@
   padding: 0 5px;
 }
 
-h2 {
-  font-size: 20px;
-}
-
-.p {
-  text-align: inherit;
-  font-size: 16px;
-}
-
 #cancelReservation {
   color: gray;
   background-color: white;

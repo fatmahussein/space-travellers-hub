@@ -1,9 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 1px solid gray;
+  padding: 1rem 1rem 1.2rem 1rem;
+  border-bottom: solid 1px #e8e8e8;
 }
 
 .navbar .logoInfo {
@@ -12,28 +21,31 @@
   gap: 1rem;
 }
 
-h1 {
-  font-size: 30px;
-}
-
 .navbar img {
   width: 40px;
+}
+
+.navHeader {
+  font-size: 1.5em;
+  opacity: 0.8;
 }
 
 .links {
   display: flex;
   gap: 1rem;
-  font-size: 20px;
 }
 
 .links a {
-  color: blue;
+  color: gray;
+  text-decoration: none;
 }
 
-.active-link {
-  text-decoration: dotted;
+.links a:active,
+.links a:focus {
+  opacity: 0.5;
 }
 
 .border {
-  border: 1px solid black;
+  padding: 1rem 1rem 1.2rem 1rem;
+  border-bottom: solid 1px #e8e8e8;
 }
