@@ -9,7 +9,7 @@ const NavBar = () => {
     <header className="navbar">
       <div className="logoInfo">
         <img src={planetImg} alt="" />
-        <h1 className='navHeader'>Space Traveller&apos;s Hub</h1>
+        <h1 className="navHeader">Space Traveller&apos;s Hub</h1>
       </div>
       <div className="links">
         <NavLink className={(nav) => handleActive(nav)} to="/">Rockets</NavLink>

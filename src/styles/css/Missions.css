@@ -1,3 +1,5 @@
 .missions-table {
   margin: 0.3rem 0.5rem;
+  border-collapse: collapse;
+  border: 1px solid #c4c4c4;
 }
