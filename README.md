@@ -40,7 +40,7 @@ In this project I will be making a calculator app using react
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://fatmahussein.github.io/space-travellers-hub/)
+- [Live Demo](https://dynamic-beignet-4d1176.netlify.app/)
 
 ## 🛠 Built With <a name="built-with">HTML, CSS and JavaScript</a>
 
