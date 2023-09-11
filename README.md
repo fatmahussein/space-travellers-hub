@@ -42,7 +42,7 @@ In this project I will be making a calculator app using react
 
 - [Live Demo](https://space-travellers-hub2023.netlify.app/)
 
-## 🛠 Built With <a name="built-with">HTML, CSS and JavaScript</a>
+## 🛠 Built With <a name="built-with">React and Redux</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
