@@ -7,7 +7,7 @@
   <br/>
 
   <h3><b>Space_TravellersHub</b></h3>
-  <p>This repo will be a react website to be used for spacex, its based on the project requirements by microverse </p>
+
 
 </div>
 
@@ -36,7 +36,7 @@
 # 📖 Space_TravellersHub< <a name="about-project"></a>
 
 **Space_TravellersHub<e**
-In this project I will be making a calculator app using react
+In this task, we worked with the real live data from the SpaceX API. Our task was to build a web application for a company that provides commercial and scientific space travel services. The application allows users to book rockets, and dragons and join selected space missions
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -141,7 +141,7 @@ Must-Install-Project-with-the-Following-Programmes:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Adding more webpack deps
+- Adding webpack 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
