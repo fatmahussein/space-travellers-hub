@@ -2,14 +2,6 @@
 
 <a name="readme-top"></a>
 
-<div align="center">
-
-  <br/>
-
-  <h3><b>Space_TravellersHub</b></h3>
-
-
-</div>
 
 # 📗 Table of Contents
 
